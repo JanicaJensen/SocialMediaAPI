@@ -1,3 +1,4 @@
+// bringing in the user and thought models so that this js knows what to do.
 const { User, Thought } = require("../models");
 
 const userController = {
@@ -68,7 +69,7 @@ const userController = {
       });
   },
 
-  // Delete user (BONUS: and delete associated thoughts)
+  // Delete user & thoughts
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
       .then((dbUserData) => {
@@ -76,7 +77,7 @@ const userController = {
           return res.status(404).json({ message: "No user with this id!" });
         }
 
-        // BONUS: Get ids of user's `thoughts` and delete them all
+        // deletes thoughts when user deleted
         return Thought.deleteMany({ _id: { $in: dbUserData.thoughts } });
       })
       .then(() => {

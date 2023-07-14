@@ -1,3 +1,4 @@
+// set the date format
 const addDateSuffix = (date) => {
     let dateStr = date.toString();
   

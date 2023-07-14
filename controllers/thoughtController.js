@@ -1,3 +1,4 @@
+// this is bringing in the Thought and User models so that thoughtController knows what to do with all this code we are including.
 const { Thought, User } = require("../models");
 
 const thoughtController = {
@@ -81,7 +82,7 @@ const thoughtController = {
           return res.status(404).json({ message: "No thought with this id!" });
         }
 
-        // Remove thought id from user's `thoughts` field
+        // Remove thought by id
         return User.findOneAndUpdate(
           { thoughts: req.params.thoughtId },
           { $pull: { thoughts: req.params.thoughtId } },

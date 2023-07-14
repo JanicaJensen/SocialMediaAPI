@@ -1,6 +1,10 @@
+// for the schema and the Types, use mongoose to parse it all out and make sense of it.
 const { Schema, Types } = require("mongoose");
+
+// I ended up not using this because mongoose does it for you! 
 const dateFormat = require("../utils/dateFormat");
 
+// creating the schema for reactions
 const reactionSchema = new Schema(
   {
     reactionId: {

@@ -1,6 +1,8 @@
 const { Schema, model } = require('mongoose');
-
+// require mongoose to make sense of all these schema and model terms
 const reactionSchema = require('./Reaction');
+
+// creating a thought schema
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -23,6 +25,7 @@ const thoughtSchema = new Schema(
   }
 );
 
+// will show how many reactions on a post 
 thoughtSchema.virtual("reactionCount").get(function() {
   return this.reactions.length;
 });
