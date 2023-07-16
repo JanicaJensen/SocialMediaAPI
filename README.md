@@ -72,6 +72,7 @@ And the username would be updated upon clicking SEND.
 
 Following that logic, anytime we are creating (POST-ing), unique IDs are not required in the URL since they do not exist yet, POST essentially means "create" in CRUD. However, if the desired outcome involves updating (PUT), deleting (DELETE), or linking 2 unique IDs together (such as in the case of a friends list where ID#1 has a friend of ID#2), then unique IDs are required in the URL field. 
 
+![Insomnia setup](/screenshots/basic%20screenshot.png)
 The following URLs can be used with the varying HTTP verbs to act upon the User, Thought, Reaction and Index models. 
 
 GET localhost:3001/api/users/  - retrieves and displays users
