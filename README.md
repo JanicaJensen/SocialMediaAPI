@@ -92,6 +92,7 @@ POST localhost:3001/api/users/:userID/friends/:friendID - links the specified us
 
 DELETE localhost:3001/api/users/:userID/friends/:friendID  - this will unlink the friendship between the users specified
 
+A full walkthrough can be found here: https://drive.google.com/file/d/1V6Xk9tlrqTcInsCiee7v-8KiriR2v6Zv/view?usp=sharing
 
 ## Tests
 
